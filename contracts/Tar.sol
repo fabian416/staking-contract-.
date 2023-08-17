@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract TAR {
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract Tar is Ownable {
     address public addressController;
     address public tareagleContract; // dirección del contrato TAREAGLE
     string public name = "Token for Companies";
