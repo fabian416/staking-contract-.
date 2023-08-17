@@ -5,16 +5,16 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./Tar.sol";
 import "./Eagle.sol";
 
-contract TAREAGLE {
-    TAR public tarToken;
-    EAGLE public eagleToken;
+contract TarEagle {
+    Tar public tarToken;
+    Eagle public eagleToken;
     IERC20 public usdtToken;
 
     uint256 public tarPrice = 1 ether; // 1 TAR = 1 USDT
 
     constructor(address _usdtAddress) {
-        tarToken = new TAR(address(this));
-        eagleToken = new EAGLE(address(this));
+        tarToken = new Tar(address(this));
+        eagleToken = new Eagle(address(this));
         usdtToken = IERC20(_usdtAddress);
     }
 
