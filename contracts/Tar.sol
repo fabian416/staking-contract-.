@@ -18,8 +18,7 @@ contract Tar is Ownable {
     }
 
     // Función para establecer la dirección de TAREAGLE y darle permisos para transferir tokens TAR
-    function setTareagleContract(address _tareagleContract) external {
-        require(msg.sender == addressController, "Only the addressController can set the TAREAGLE contract address");
+    function setTareagleContract(address _tareagleContract) external onlyOwner {
         tareagleContract = _tareagleContract;
     }
 
